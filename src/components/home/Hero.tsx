@@ -8,14 +8,14 @@ export default function Hero() {
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-navy-900 -mt-20">
       {/* Background Video with overlay */}
-      <video 
-        autoPlay 
-        loop 
-        muted 
-        playsInline 
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute inset-0 z-0 w-full h-full object-cover"
       >
-        <source src="https://videos.pexels.com/video-files/5608051/5608051-uhd_2160_4096_25fps.mp4" type="video/mp4" />
+        <source src="https://cdn.pixabay.com/video/2026/03/04/338238_tiny.mp4" type="video/mp4" />
       </video>
       <div className="absolute inset-0 z-10 bg-navy-900/80 backdrop-blur-[2px]" />
 
@@ -26,7 +26,7 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-4xl mx-auto"
         >
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -38,12 +38,12 @@ export default function Hero() {
           </motion.div>
 
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
-            Excellence in <br className="hidden md:block" /> 
+            Excellence in <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">
               Corporate & Legal
             </span> Solutions
           </h1>
-          
+
           <p className="text-lg md:text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
             Simplifying complexities and providing expert guidance to empower corporate entities, businesses, and startups to navigate the evolving legal landscape.
           </p>
@@ -61,7 +61,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div 
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.5, duration: 1 }}
@@ -69,13 +69,13 @@ export default function Hero() {
       >
         <span className="text-slate-400 text-[10px] tracking-widest uppercase mb-2">Scroll</span>
         <div className="w-[1px] h-16 bg-slate-600 relative overflow-hidden">
-          <motion.div 
+          <motion.div
             className="w-full h-1/2 bg-gold-500"
-            animate={{ 
+            animate={{
               y: [0, 64],
             }}
-            transition={{ 
-              repeat: Infinity, 
+            transition={{
+              repeat: Infinity,
               duration: 1.5,
               ease: "linear",
             }}
