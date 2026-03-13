@@ -59,11 +59,11 @@ export default function About() {
           >
             <div className="flex items-center gap-3 mb-6">
               <div className="h-[2px] w-12 bg-gold-500"></div>
-              <span className="text-navy-900 font-bold tracking-wider text-sm uppercase">Our Purpose</span>
+              <span className="text-maroon-950 font-bold tracking-wider text-sm uppercase">Our Purpose</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-navy-900 mb-6 leading-tight">
-              Simplifying <span className="text-gold-600">Legal Complexities</span> for Your Success
+            <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon-950 mb-6 leading-tight">
+              Simplifying <span className="text-gold-500">Legal Complexities</span> for Your Success
             </h2>
             
             <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-light">
@@ -87,12 +87,12 @@ export default function About() {
               <motion.div 
                 key={index} 
                 variants={itemVariants}
-                className="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md hover:border-gold-200 transition-all duration-300 group"
+                className="bg-beige-50 p-8 rounded-2xl border border-beige-100 shadow-sm hover:shadow-md hover:border-gold-200 transition-all duration-300 group"
               >
                 <div className="p-4 bg-white rounded-xl inline-block shadow-sm group-hover:scale-110 group-hover:bg-gold-50 transition-all duration-300 mb-6">
                   {value.icon}
                 </div>
-                <h3 className="text-xl font-bold font-serif text-navy-900 mb-3">{value.title}</h3>
+                <h3 className="text-xl font-bold font-serif text-maroon-950 mb-3">{value.title}</h3>
                 <p className="text-slate-600 font-light text-sm leading-relaxed">{value.description}</p>
               </motion.div>
             ))}

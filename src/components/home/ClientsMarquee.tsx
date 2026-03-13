@@ -24,7 +24,7 @@ export default function ClientsMarquee() {
   return (
     <section className="py-20 bg-white border-y border-slate-100 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10 text-center">
-        <h2 className="text-xl md:text-2xl font-serif font-bold text-navy-900 mb-2">Trusted By Leading Organizations</h2>
+        <h2 className="text-xl md:text-2xl font-serif font-bold text-maroon-950 mb-2">Trusted By Leading Organizations</h2>
         <div className="w-16 h-[2px] bg-gold-500 mx-auto"></div>
       </div>
 
@@ -41,9 +41,9 @@ export default function ClientsMarquee() {
           {duplicatedClients.map((client, index) => (
             <div 
               key={index}
-              className="inline-flex items-center justify-center text-xl font-bold font-serif min-w-max text-slate-300 group transition-all duration-300 pointer-events-none"
+              className="inline-flex items-center justify-center text-xl font-bold font-serif min-w-max text-maroon-900/40 group transition-all duration-300"
             >
-              <span className="opacity-60 grayscale transition-all duration-300">
+              <span className="opacity-100 transition-all duration-300">
                 {client}
               </span>
             </div>

@@ -6,11 +6,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-navy-900 text-slate-300 pt-16 pb-8 border-t border-navy-800">
+    <footer className="bg-maroon-950 text-beige-50/70 pt-16 pb-8 border-t-2 border-gold-500/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Intro */}
-          <div className="col-span-1 lg:col-span-1 border-r-0 border-b pb-8 lg:border-b-0 lg:border-r border-slate-700/50 lg:pr-8">
+          <div className="col-span-1 lg:col-span-1 border-r-0 border-b pb-8 lg:border-b-0 lg:border-r border-maroon-800/80 lg:pr-8">
             <Link href="/" className="flex items-center mb-6 pointer-events-none">
               <div className="relative w-48 h-16 overflow-hidden rounded-lg bg-transparent">
                 <Image 
@@ -44,7 +44,7 @@ export default function Footer() {
           <div className="col-span-1">
             <h3 className="text-white font-serif font-bold text-lg mb-6">Quick Links</h3>
             <ul className="space-y-3 text-sm">
-              {['Home', 'Practice Areas', 'Our Team', 'Careers', 'Contact'].map((item) => (
+              {['Home', 'Practice Areas', 'Our Team', 'Insights', 'Careers', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="hover:text-gold-500 transition-colors flex items-center">
                     <span className="mr-2 text-gold-600">›</span> {item}
@@ -121,8 +121,8 @@ export default function Footer() {
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
           <p>© {currentYear} Invictus Corporate & Legal Consultants. All rights reserved.</p>
           <div className="mt-4 md:mt-0 space-x-4">
-            <a href="#" className="hover:text-gold-500 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-gold-500 transition-colors">Terms of Service</a>
+            <Link href="/privacy-policy" className="hover:text-gold-500 transition-colors">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-gold-500 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>

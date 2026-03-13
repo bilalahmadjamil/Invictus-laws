@@ -33,7 +33,7 @@ export default function PracticeAreasPreview() {
   ];
 
   return (
-    <section className="py-24 bg-navy-900 border-t border-navy-800 relative z-10">
+    <section className="py-24 bg-maroon-950 border-t border-maroon-900 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -66,7 +66,7 @@ export default function PracticeAreasPreview() {
             </Link>
           </motion.div>
         </div>
-
+ 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {practiceAreas.map((area, index) => (
             <motion.div
@@ -75,13 +75,13 @@ export default function PracticeAreasPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-navy-800/50 backdrop-blur-sm border border-navy-700 p-8 rounded-2xl hover:bg-navy-800 hover:border-gold-500/50 transition-all duration-300 group cursor-pointer h-full flex flex-col"
+              className="bg-maroon-900/40 backdrop-blur-sm border border-maroon-800 p-8 rounded-2xl hover:bg-maroon-900/60 hover:border-gold-500/50 transition-all duration-300 group cursor-pointer h-full flex flex-col"
             >
-              <div className="mb-6 bg-navy-900 p-4 rounded-xl inline-block w-16 h-16 shadow-inner group-hover:scale-110 transition-transform duration-300 group-hover:bg-navy-700">
+              <div className="mb-6 bg-maroon-950 border border-maroon-900 p-4 rounded-xl inline-block w-16 h-16 shadow-inner group-hover:scale-110 transition-transform duration-300 group-hover:bg-maroon-800">
                 {area.icon}
               </div>
               <h3 className="text-xl font-bold font-serif text-white mb-4 group-hover:text-gold-400 transition-colors">{area.title}</h3>
-              <p className="text-slate-400 font-light text-sm leading-relaxed mb-6 flex-grow">{area.description}</p>
+              <p className="text-beige-50/70 font-light text-sm leading-relaxed mb-6 flex-grow">{area.description}</p>
               
               <Link href={area.link} className="inline-flex items-center text-gold-500 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 mt-auto">
                 Learn more <ArrowRight className="ml-1 w-4 h-4" />

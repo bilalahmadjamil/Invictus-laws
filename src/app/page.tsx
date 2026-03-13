@@ -3,6 +3,7 @@ import About from "@/components/home/About";
 import PracticeAreasPreview from "@/components/home/PracticeAreasPreview";
 import TeamPreview from "@/components/home/TeamPreview";
 import ClientsMarquee from "@/components/home/ClientsMarquee";
+import InsightsPreview from "@/components/home/InsightsPreview";
 import CallToAction from "@/components/home/CallToAction";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <PracticeAreasPreview />
       <TeamPreview />
       <ClientsMarquee />
+      <InsightsPreview />
       <CallToAction />
     </div>
   );

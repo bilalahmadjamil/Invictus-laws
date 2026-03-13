@@ -25,6 +25,7 @@ export default function Navbar() {
     { name: "Home", href: "/" },
     { name: "Practice Areas", href: "/practice-areas" },
     { name: "Team", href: "/team" },
+    { name: "Insights", href: "/insights" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -61,27 +62,24 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-gold-500 ${getTextColor('text-slate-200', 'text-slate-700')}`}
+                className={`text-sm font-medium transition-colors hover:text-gold-500 ${getTextColor('text-beige-50', 'text-maroon-950')}`}
               >
                 {link.name}
               </Link>
             ))}
             <Link
               href="/contact"
-              className="bg-navy-900 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-gold-600 transition-colors shadow-md"
+              className="bg-maroon-950 text-white px-5 py-2 rounded-md text-sm font-medium hover:bg-maroon-900 transition-colors shadow-md border border-maroon-800"
             >
               Consultation
             </Link>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:flex hidden items-center">
-            {/* Keeping this hidden on md screens as per original structure, but making mobile button visible */}
-          </div>
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`focus:outline-none transition-colors hover:text-gold-500 ${getTextColor('text-white', 'text-slate-800')}`}
+              className={`focus:outline-none transition-colors hover:text-gold-500 ${getTextColor('text-white', 'text-maroon-950')}`}
             >
               {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
@@ -96,7 +94,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden glass border-t border-slate-200"
+            className="md:hidden glass-maroon border-t border-maroon-800"
           >
             <div className="px-4 pt-2 pb-6 space-y-1">
               {navLinks.map((link) => (
@@ -104,7 +102,7 @@ export default function Navbar() {
                   key={link.name}
                   href={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block px-3 py-4 text-base font-medium text-slate-800 hover:text-gold-600 hover:bg-slate-50 rounded-md"
+                  className="block px-3 py-4 text-base font-medium text-beige-50 hover:text-gold-500 hover:bg-maroon-900/50 rounded-md"
                 >
                   {link.name}
                 </Link>
@@ -113,7 +111,7 @@ export default function Navbar() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-center bg-navy-900 text-white px-5 py-3 rounded-md text-base font-medium hover:bg-gold-600 transition-colors shadow-md"
+                  className="block w-full text-center bg-maroon-950 text-white px-5 py-3 rounded-md text-base font-medium hover:bg-maroon-900 transition-colors shadow-md border border-maroon-800"
                 >
                   Get Consultation
                 </Link>

@@ -5,8 +5,16 @@
   --color-gold-500: #d69e2e;
   --color-gold-600: #b7791f;
 
-  --color-navy-800: #1a365d;
-  --color-navy-900: #0f172a;
+  --color-maroon-800: #451a1a;
+  --color-maroon-900: #2D0A0A;
+  --color-maroon-950: #1A0F0F;
+
+  --color-beige-50: #FAF9F6;
+  --color-beige-100: #F5F5DC;
+  --color-beige-200: #E6E6CC;
+
+  --color-slate-950: #020617;
+  --color-black-pure: #000000;
 
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
@@ -22,7 +30,7 @@
   }
 
   body {
-    @apply bg-slate-50 text-slate-900 font-sans;
+    @apply bg-white text-maroon-950 font-sans;
   }
 }
 
@@ -31,14 +39,21 @@
     @apply bg-white/70 backdrop-blur-md border border-white/20 shadow-lg;
   }
   .glass-dark {
-    @apply bg-slate-900/70 backdrop-blur-md border border-white/10 shadow-lg;
+    @apply bg-maroon-950/70 backdrop-blur-md border border-white/10 shadow-lg;
+  }
+  .glass-maroon {
+    @apply bg-maroon-900/40 backdrop-blur-md border border-maroon-800/50 shadow-xl;
   }
   
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-navy-900 hover:bg-navy-800 transition-colors duration-200 shadow-md;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-maroon-900 hover:bg-maroon-800 transition-colors duration-200 shadow-md;
+  }
+  
+  .btn-maroon {
+    @apply inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-lg text-white bg-maroon-950 hover:bg-maroon-900 hover:shadow-lg transition-all duration-300;
   }
   
   .btn-outline {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-navy-900 text-base font-medium rounded-md text-navy-900 bg-transparent hover:bg-navy-900 hover:text-white transition-colors duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-maroon-900 text-base font-medium rounded-md text-maroon-900 bg-transparent hover:bg-maroon-900 hover:text-white transition-colors duration-200;
   }
 }

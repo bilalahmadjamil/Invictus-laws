@@ -98,13 +98,13 @@ export default function PracticeAreasGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-          className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full"
+          className="bg-maroon-900/40 backdrop-blur-sm rounded-2xl p-8 border border-maroon-800 shadow-sm hover:shadow-2xl hover:border-gold-500/50 hover:-translate-y-2 transition-all duration-300 group flex flex-col h-full"
         >
-          <div className="mb-6 bg-slate-50 border border-slate-100 p-4 rounded-xl inline-block w-16 h-16 group-hover:bg-gold-50 group-hover:border-gold-100 transition-colors duration-300">
+          <div className="mb-6 bg-maroon-950 border border-maroon-800 p-4 rounded-xl inline-block w-16 h-16 group-hover:bg-gold-500/10 group-hover:border-gold-500 transition-colors duration-300">
             {area.icon}
           </div>
-          <h3 className="text-xl font-bold font-serif text-navy-900 mb-4 group-hover:text-gold-600 transition-colors">{area.title}</h3>
-          <p className="text-slate-600 font-light text-sm leading-relaxed flex-grow">{area.desc}</p>
+          <h3 className="text-xl font-bold font-serif text-white mb-4 group-hover:text-gold-500 transition-colors">{area.title}</h3>
+          <p className="text-beige-50/70 font-light text-sm leading-relaxed flex-grow">{area.desc}</p>
         </motion.div>
       ))}
     </div>

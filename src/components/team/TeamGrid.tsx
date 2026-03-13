@@ -12,7 +12,28 @@ export default function TeamGrid() {
       bio: "An experienced legal professional with a focus on constitutional, corporate, commercial, and election laws. Advises government authorities in regulatory matters, private tech restructuring, and FIDIC contracts. He actively represents clients before High Courts, Special Tribunals, and handles dispute resolution and ADR.",
       initials: "HM",
       location: "Lahore",
-      image: "/profiles/HaiderMahmood.png"
+      image: "/profiles/HaiderMahmood.png",
+      objectPosition: "top"
+    },
+    {
+      name: "Ms. Shafia Imran Lati",
+      role: "Executive Partner",
+      qualifications: "Advocate High Court | LL.B. from UMT",
+      bio: "Accomplished in criminal law, cyber crime, human rights, and workplace harassment. Resolved over 100 cyber crime cases at pre-trial stages and secured prominent freedom of expression judgments.",
+      initials: "SIL",
+      location: "Lahore",
+      image: "/profiles/ShafiaImranLati.png",
+      objectPosition: "top"
+    },
+    {
+      name: "Jhanzaib Ahmad Ranjha",
+      role: "Partner / Co-Founder",
+      qualifications: "Advocate High Court | LL.B. from UMT",
+      bio: "Primarily focuses on the litigation wing across trials and High Courts handling family law, civil cases, partition disputes, and banking cases with deep legal acumen.",
+      initials: "JAR",
+      location: "Lahore",
+      image: "/profiles/JhanzaibAhmad.jpeg",
+      objectPosition: "top"
     },
     {
       name: "Khirad Ali",
@@ -33,31 +54,14 @@ export default function TeamGrid() {
       image: "/profiles/MuhammadBurhan.png"
     },
     {
-      name: "Jhanzaib Ahmad Ranjha",
-      role: "Partner / Co-Founder",
-      qualifications: "Advocate High Court | LL.B. from UMT",
-      bio: "Primarily focuses on the litigation wing across trials and High Courts handling family law, civil cases, partition disputes, and banking cases with deep legal acumen.",
-      initials: "JAR",
-      location: "Lahore",
-      image: "/profiles/JhanzaibAhmad.jpeg"
-    },
-    {
-      name: "Ms. Shafia Imran Lati",
-      role: "Executive Partner",
-      qualifications: "Advocate High Court | LL.B. from UMT",
-      bio: "Accomplished in criminal law, cyber crime, human rights, and workplace harassment. Resolved over 100 cyber crime cases at pre-trial stages and secured prominent freedom of expression judgments.",
-      initials: "SIL",
-      location: "Lahore",
-      image: "/profiles/ShafiaImranLati.png"
-    },
-    {
       name: "Mr. Malik Hassan",
       role: "Associate Partner",
       qualifications: "Advocate High Court | LL.M. (UK), BBA",
       bio: "A unique blend of business acumen and legal expertise. Focuses on commercial litigation, regulatory compliance, and M&A. Drives strategic solutions across high-value telecoms disputes.",
       initials: "MH",
       location: "Islamabad",
-      image: "/profiles/MalikHassan.jpeg"
+      image: "/profiles/MalikHassan.jpeg",
+      objectPosition: "top"
     },
     {
       name: "Ms. Aqsa Javed",
@@ -120,10 +124,10 @@ export default function TeamGrid() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: (index % 3) * 0.1 }}
-          className="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm hover:shadow-xl hover:border-gold-300 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group"
+          className="bg-beige-50 rounded-2xl p-8 border border-beige-100 shadow-sm hover:shadow-xl hover:border-gold-300 hover:-translate-y-2 transition-all duration-300 flex flex-col h-full group"
         >
           <div className="flex items-center gap-5 mb-6">
-            <div className="w-20 h-20 shrink-0 rounded-full bg-navy-900 group-hover:ring-4 group-hover:ring-gold-500/20 transition-all duration-300 flex items-center justify-center text-white font-serif text-xl font-bold shadow-md overflow-hidden relative">
+            <div className="w-20 h-20 shrink-0 rounded-full bg-maroon-950 group-hover:ring-4 group-hover:ring-gold-500/20 transition-all duration-300 flex items-center justify-center text-white font-serif text-xl font-bold shadow-md overflow-hidden relative">
               {member.image ? (
                 <Image 
                   src={member.image} 
@@ -131,20 +135,21 @@ export default function TeamGrid() {
                   width={80}
                   height={80}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  style={{ objectPosition: (member as any).objectPosition || "center" }}
                 />
               ) : (
-                <div className="w-full h-full flex items-center justify-center bg-navy-900 group-hover:bg-gold-500 transition-colors duration-300">
+                <div className="w-full h-full flex items-center justify-center bg-maroon-950 group-hover:bg-gold-500 transition-colors duration-300">
                   {member.initials}
                 </div>
               )}
             </div>
             <div>
-              <h3 className="text-xl font-bold text-navy-900 font-serif leading-tight mb-1">{member.name}</h3>
-              <p className="text-gold-600 text-xs font-bold tracking-wide uppercase">{member.role}</p>
+              <h3 className="text-xl font-bold text-maroon-950 font-serif leading-tight mb-1">{member.name}</h3>
+              <p className="text-gold-700 text-xs font-bold tracking-wide uppercase">{member.role}</p>
             </div>
           </div>
           
-          <div className="mb-4 text-xs font-semibold tracking-wide text-slate-500 border-b border-slate-100 pb-4">
+          <div className="mb-4 text-xs font-semibold tracking-wide text-maroon-900/60 border-b border-maroon-100 pb-4">
             {member.qualifications} <br/> ({member.location} Office)
           </div>
           
