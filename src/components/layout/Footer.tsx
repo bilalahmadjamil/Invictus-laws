@@ -72,8 +72,8 @@ export default function Footer() {
                   <Phone size={16} />
                 </span>
                 <div className="flex flex-col">
-                  <span>0313-4891684</span>
-                  <span>0345-1042352</span>
+                  <a href="tel:+923134891684" className="hover:text-gold-500 transition-colors">0313-4891684</a>
+                  <a href="tel:+923451042352" className="hover:text-gold-500 transition-colors">0345-1042352</a>
                 </div>
               </li>
               <li className="flex items-center">
@@ -103,15 +103,15 @@ export default function Footer() {
                   <Phone size={16} />
                 </span>
                 <div className="flex flex-col">
-                  <span>0336-5036073</span>
-                  <span>0312-9668001</span>
+                  <a href="tel:+923365036073" className="hover:text-gold-500 transition-colors">0336-5036073</a>
+                  <a href="tel:+923129668001" className="hover:text-gold-500 transition-colors">0312-9668001</a>
                 </div>
               </li>
               <li className="flex items-center">
                 <span className="mr-3 text-slate-500 w-5 flex justify-center">
                   <Mail size={16} />
                 </span>
-                <span>official@iclc.com.pk</span>
+                <a href="mailto:official@iclc.com.pk" className="hover:text-gold-500 transition-colors">official@iclc.com.pk</a>
               </li>
             </ul>
           </div>
@@ -119,7 +119,21 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
-          <p>© {currentYear} Invictus Corporate & Legal Consultants. All rights reserved.</p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p>© {currentYear} Invictus Corporate & Legal Consultants. All rights reserved.</p>
+            <span className="hidden md:inline text-slate-700">|</span>
+            <p>
+              Powered by{" "}
+              <a 
+                href="https://www.linkedin.com/in/biiiiilaaaaal/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gold-500/80 hover:text-gold-400 transition-colors font-medium"
+              >
+                Bilal Ahmad
+              </a>
+            </p>
+          </div>
           <div className="mt-4 md:mt-0 space-x-4">
             <Link href="/privacy-policy" className="hover:text-gold-500 transition-colors">Privacy Policy</Link>
             <Link href="/terms-of-service" className="hover:text-gold-500 transition-colors">Terms of Service</Link>

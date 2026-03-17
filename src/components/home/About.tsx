@@ -62,7 +62,7 @@ export default function About() {
               <span className="text-maroon-950 font-bold tracking-wider text-sm uppercase">Our Purpose</span>
             </div>
             
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-maroon-950 mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon-950 mb-6 leading-tight">
               Simplifying <span className="text-gold-500">Legal Complexities</span> for Your Success
             </h2>
             

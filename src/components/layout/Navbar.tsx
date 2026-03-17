@@ -45,7 +45,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <div className={`relative h-16 w-48 overflow-hidden rounded-lg transition-colors bg-transparent`}>
+            <div className={`relative h-12 w-36 sm:h-16 sm:w-48 overflow-hidden rounded-lg transition-colors bg-transparent`}>
               <Image 
                 src={isScrolled || !isHome ? "/logo-reversed.jpg" : "/logo.jpg"} 
                 alt="ICLC Logo" 

@@ -37,12 +37,12 @@ export default function Hero() {
             <div className="h-[1px] w-12 bg-gold-500"></div>
           </motion.div>
 
-          <h1 className="text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">
             Trusted <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Legal Guidance</span> <br className="hidden md:block" />
             for Businesses and Pakistanis Worldwide
           </h1>
 
-          <p className="text-lg md:text-xl text-beige-50/80 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-beige-50/80 mb-10 max-w-3xl mx-auto font-light leading-relaxed">
             Providing reliable and forward-thinking legal solutions to businesses, startups, and overseas Pakistanis, helping them navigate complex corporate and regulatory landscapes with confidence.
           </p>
 

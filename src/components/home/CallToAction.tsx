@@ -21,21 +21,21 @@ export default function CallToAction() {
           transition={{ duration: 0.5 }}
         >
           <PhoneCall className="w-16 h-16 mx-auto mb-6 text-gold-500 opacity-90" />
-          <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold mb-6">
             Ready to Discuss Your Legal Needs?
           </h2>
-          <p className="text-lg md:text-xl font-light text-beige-50/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl font-light text-beige-50/80 mb-10 max-w-2xl mx-auto leading-relaxed">
             Contact us today to schedule a consultation with one of our experienced partners in Lahore or Islamabad.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-md text-white bg-maroon-900 hover:bg-maroon-800 transition-all duration-300 shadow-xl group">
+            <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-md text-white bg-maroon-950 hover:bg-maroon-800 transition-all duration-300 shadow-xl group">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link href="tel:03134891684" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-beige-100/30 text-base font-bold rounded-md text-white bg-transparent hover:bg-white/5 transition-all duration-300">
+            <a href="tel:+923134891684" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-beige-100/30 text-base font-bold rounded-md text-white bg-transparent hover:bg-white/5 transition-all duration-300">
               Call Lahore Office
-            </Link>
+            </a>
           </div>
         </motion.div>
       </div>

@@ -63,14 +63,14 @@ export default function TeamGrid() {
       image: "/profiles/MalikHassan.jpeg",
       objectPosition: "top"
     },
-    {
+    /* {
       name: "Ms. Aqsa Javed",
       role: "Associate Partner",
       qualifications: "Advocate High Court",
       bio: "Specializes in cyber laws, tech-facilitated gender-based violence, and privacy breaches. Provides legal counsel for electronic crimes and GDPR compliance.",
       initials: "AJ",
       location: "Lahore"
-    },
+    }, */
     {
       name: "Muhammad Umer Abbasi",
       role: "Associate Partner",
@@ -88,14 +88,14 @@ export default function TeamGrid() {
       initials: "AHK",
       location: "Lahore"
     },
-    {
+    /* {
       name: "Ms. Minahil Farooq",
       role: "Associate",
       qualifications: "Advocate High Court",
       bio: "A dedicated advocate focused on civil, criminal, and cyber law. Fierce advocate for data protection, victims of harassment, and survivors of domestic violence.",
       initials: "MF",
       location: "Lahore"
-    },
+    }, */
     {
       name: "Mr. Mohsin Mehmood",
       role: "Associate",

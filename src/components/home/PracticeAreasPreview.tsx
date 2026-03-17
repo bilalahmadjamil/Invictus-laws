@@ -48,7 +48,7 @@ export default function PracticeAreasPreview() {
               <div className="h-[1px] w-12 bg-gold-500"></div>
               <span className="text-gold-500 font-bold tracking-wider text-sm uppercase">What We Do</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-white mb-6 leading-tight">
               Comprehensive Legal <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Expertise</span>
             </h2>

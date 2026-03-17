@@ -52,7 +52,7 @@ export default function TeamPreview() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-serif font-bold text-maroon-950 mb-6 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon-950 mb-6 leading-tight"
           >
             Skilled Professionals <br/>
             Dedicated to <span className="italic text-gold-600">Your Success</span>

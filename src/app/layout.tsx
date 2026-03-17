@@ -11,6 +11,25 @@ const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfa
 export const metadata: Metadata = {
   title: "Invictus Corporate & Legal Consultants | ICLC",
   description: "ICLC is a premier law firm offering comprehensive legal solutions for corporate entities, overseas Pakistanis, small businesses, and startups.",
+  keywords: ["Law Firm Pakistan", "Corporate Lawyers Lahore", "Legal Consultants Islamabad", "Overseas Pakistanis Legal Help", "Company Registration Pakistan", "Cyber Law Pakistan", "Copyright Registration"],
+  authors: [{ name: "ICLC Team" }],
+  openGraph: {
+    title: "Invictus Corporate & Legal Consultants | ICLC",
+    description: "Premier law firm in Pakistan providing corporate, civil, and criminal legal services.",
+    url: "https://iclc.com.pk",
+    siteName: "ICLC",
+    locale: "en_PK",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Invictus Corporate & Legal Consultants | ICLC",
+    description: "Premier law firm in Pakistan providing corporate, civil, and criminal legal services.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 export default function RootLayout({

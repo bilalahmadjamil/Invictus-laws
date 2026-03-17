@@ -50,7 +50,7 @@ export default function InsightsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl md:text-5xl font-serif font-bold text-maroon-950 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-maroon-950 leading-tight"
             >
               Expert Perspective <br />
               <span className="italic text-gold-600">for Modern Challenges</span>
@@ -62,10 +62,11 @@ export default function InsightsPreview() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
+            className="w-full md:w-auto text-center"
           >
             <Link
               href="/insights"
-              className="inline-flex items-center px-8 py-4 bg-maroon-950 text-white font-bold rounded-xl hover:bg-maroon-900 transition-all shadow-xl shadow-maroon-900/10 group"
+              className="inline-flex items-center justify-center w-full sm:w-auto px-8 py-4 bg-maroon-950 text-white font-bold rounded-xl hover:bg-maroon-900 transition-all shadow-xl shadow-maroon-900/10 group text-sm sm:text-base"
             >
               Explore All Insights
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +75,7 @@ export default function InsightsPreview() {
         </div>
 
         {/* Uniform Grid — centered when fewer cards */}
-        <div className={`flex flex-wrap justify-center gap-8`}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch justify-center max-w-5xl mx-auto">
           {previewInsights.map((insight, idx) => (
             <motion.div
               key={idx}
@@ -82,11 +83,9 @@ export default function InsightsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + idx * 0.1 }}
-              className="group relative flex flex-col bg-white rounded-[40px] p-8 md:p-10 border border-maroon-100/50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500"
-              style={{
-                width: count === 1 ? 'min(520px, 100%)' : 'min(480px, 100%)',
-                flex: `0 0 ${count === 1 ? 'min(520px, 100%)' : 'min(480px, calc(50% - 16px))'}`
-              }}
+              className={`group relative flex flex-col bg-white rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-10 border border-maroon-100/50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full ${
+                count === 1 ? 'lg:col-span-2 max-w-xl mx-auto' : ''
+              }`}
             >
               {/* Category & Time */}
               <div className="flex items-center justify-between mb-8">

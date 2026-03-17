@@ -52,8 +52,8 @@ export default function ContactPage() {
                       <Phone size={20} />
                     </span>
                     <div className="flex flex-col font-medium text-maroon-950">
-                      <span>0313-4891684</span>
-                      <span>0345-1042352</span>
+                      <a href="tel:+923134891684" className="hover:text-gold-600 transition-colors">0313-4891684</a>
+                      <a href="tel:+923451042352" className="hover:text-gold-600 transition-colors">0345-1042352</a>
                     </div>
                   </li>
                   <li className="flex items-center">
@@ -87,15 +87,15 @@ export default function ContactPage() {
                       <Phone size={20} />
                     </span>
                     <div className="flex flex-col font-medium text-maroon-950">
-                      <span>0336-5036073</span>
-                      <span>0312-9668001</span>
+                      <a href="tel:+923365036073" className="hover:text-gold-600 transition-colors">0336-5036073</a>
+                      <a href="tel:+923129668001" className="hover:text-gold-600 transition-colors">0312-9668001</a>
                     </div>
                   </li>
                   <li className="flex items-center">
                     <span className="mr-4 bg-beige-50 p-2 rounded-lg text-maroon-900">
                       <Mail size={20} />
                     </span>
-                    <span className="text-maroon-950">official@iclc.com.pk</span>
+                    <a href="mailto:official@iclc.com.pk" className="text-maroon-950 hover:text-gold-600 transition-colors font-medium">official@iclc.com.pk</a>
                   </li>
                 </ul>
               </div>
