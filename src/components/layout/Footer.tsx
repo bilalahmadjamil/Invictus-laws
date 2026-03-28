@@ -125,12 +125,12 @@ export default function Footer() {
             <p>
               Powered by{" "}
               <a 
-                href="https://www.linkedin.com/in/biiiiilaaaaal/" 
+                href="https://www.dualtechlabs.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gold-500/80 hover:text-gold-400 transition-colors font-medium"
               >
-                Bilal Ahmad
+                DualTech Labs
               </a>
             </p>
           </div>
