@@ -75,7 +75,7 @@ export default function PracticeAreasPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-maroon-900/40 backdrop-blur-sm border border-maroon-800 p-8 rounded-2xl hover:bg-maroon-900/60 hover:border-gold-500/50 transition-all duration-300 group cursor-pointer h-full flex flex-col"
+              className="bg-maroon-900/40 border border-maroon-800 p-8 rounded-2xl hover:bg-maroon-900/60 hover:border-gold-500/50 transition-all duration-300 group cursor-pointer h-full flex flex-col"
             >
               <div className="mb-6 bg-maroon-950 border border-maroon-900 p-4 rounded-xl inline-block w-16 h-16 shadow-inner group-hover:scale-110 transition-transform duration-300 group-hover:bg-maroon-800">
                 {area.icon}

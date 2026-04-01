@@ -35,7 +35,7 @@ export default function ClientsMarquee() {
           transition={{
             repeat: Infinity,
             ease: "linear",
-            duration: 40,
+            duration: 50, // Slower animation for better performance
           }}
         >
           {duplicatedClients.map((client, index) => (

@@ -83,9 +83,7 @@ export default function InsightsPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 + idx * 0.1 }}
-              className={`group relative flex flex-col bg-white rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-10 border border-maroon-100/50 shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 h-full ${
-                count === 1 ? 'lg:col-span-2 max-w-xl mx-auto' : ''
-              }`}
+              className="group relative flex flex-col bg-white rounded-[32px] md:rounded-[40px] p-6 sm:p-8 md:p-10 border border-maroon-100/50 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 h-full"
             >
               {/* Category & Time */}
               <div className="flex items-center justify-between mb-8">

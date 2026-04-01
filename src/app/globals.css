@@ -23,7 +23,7 @@
 @layer base {
   html,
   body {
-    @apply antialiased scroll-smooth;
+    @apply antialiased;
     * {
       @apply box-border;
     }
@@ -31,6 +31,31 @@
 
   body {
     @apply bg-white text-maroon-950 font-sans;
+    
+    /* Performance optimizations */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+    
+    /* Remove will-change for better performance */
+  }
+  
+  /* Hardware acceleration for smooth animations */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  /* Optimize hover effects for better performance */
+  .hover-optimized {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
+  }
+  
+  .hover-optimized:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   }
 }
 

@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand & Intro */}
-          <div className="col-span-1 lg:col-span-1 border-r-0 border-b pb-8 lg:border-b-0 lg:border-r border-maroon-800/80 lg:pr-8">
+          <div className="col-span-1 lg:col-span-1 lg:pr-8">
             <Link href="/" className="flex items-center mb-6 pointer-events-none">
               <div className="relative w-48 h-16 overflow-hidden rounded-lg bg-transparent">
                 <Image 
@@ -18,6 +18,7 @@ export default function Footer() {
                   alt="ICLC Logo" 
                   fill
                   className="object-contain object-left"
+                  loading="lazy"
                 />
               </div>
             </Link>
@@ -25,15 +26,15 @@ export default function Footer() {
               Offering comprehensive and accessible legal solutions catering to corporate entities, overseas Pakistanis, small businesses, and startups under one roof.
             </p>
             <div className="flex items-center space-x-4">
-              <a href="https://www.instagram.com/invictus_law_firm?igsh=Zm84cHRyaXFyOTRy" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors">
+              <a href="https://www.instagram.com/invictus_law_firm?igsh=Zm84cHRyaXFyOTRy" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors duration-300">
                 <span className="sr-only">Instagram</span>
                 <Instagram size={20} />
               </a>
-              <a href="https://www.facebook.com/share/1DjmfrMKsq/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/share/1DjmfrMKsq/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors duration-300">
                 <span className="sr-only">Facebook</span>
                 <Facebook size={20} />
               </a>
-              <a href="https://www.linkedin.com/company/invictus-corporate-legal-consultants/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/company/invictus-corporate-legal-consultants/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-gold-500 hover:text-white transition-colors duration-300">
                 <span className="sr-only">LinkedIn</span>
                 <Linkedin size={20} />
               </a>
@@ -46,7 +47,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               {['Home', 'Practice Areas', 'Our Team', 'Insights', 'Careers', 'Contact'].map((item) => (
                 <li key={item}>
-                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="hover:text-gold-500 transition-colors flex items-center">
+                  <Link href={`/${item.toLowerCase().replace(' ', '-')}`} className="hover:text-gold-500 transition-colors duration-300 flex items-center">
                     <span className="mr-2 text-gold-600">›</span> {item}
                   </Link>
                 </li>
@@ -72,8 +73,8 @@ export default function Footer() {
                   <Phone size={16} />
                 </span>
                 <div className="flex flex-col">
-                  <a href="tel:+923134891684" className="hover:text-gold-500 transition-colors">0313-4891684</a>
-                  <a href="tel:+923451042352" className="hover:text-gold-500 transition-colors">0345-1042352</a>
+                  <a href="tel:+923134891684" className="hover:text-gold-500 transition-colors duration-300">0313-4891684</a>
+                  <a href="tel:+923451042352" className="hover:text-gold-500 transition-colors duration-300">0345-1042352</a>
                 </div>
               </li>
               <li className="flex items-center">
@@ -103,15 +104,15 @@ export default function Footer() {
                   <Phone size={16} />
                 </span>
                 <div className="flex flex-col">
-                  <a href="tel:+923365036073" className="hover:text-gold-500 transition-colors">0336-5036073</a>
-                  <a href="tel:+923129668001" className="hover:text-gold-500 transition-colors">0312-9668001</a>
+                  <a href="tel:+923365036073" className="hover:text-gold-500 transition-colors duration-300">0336-5036073</a>
+                  <a href="tel:+923129668001" className="hover:text-gold-500 transition-colors duration-300">0312-9668001</a>
                 </div>
               </li>
               <li className="flex items-center">
                 <span className="mr-3 text-slate-500 w-5 flex justify-center">
                   <Mail size={16} />
                 </span>
-                <a href="mailto:official@iclc.com.pk" className="hover:text-gold-500 transition-colors">official@iclc.com.pk</a>
+                <a href="mailto:official@iclc.com.pk" className="hover:text-gold-500 transition-colors duration-300">official@iclc.com.pk</a>
               </li>
             </ul>
           </div>
@@ -128,15 +129,15 @@ export default function Footer() {
                 href="https://www.dualtechlabs.com/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-gold-500/80 hover:text-gold-400 transition-colors font-medium"
+                className="text-gold-500/80 hover:text-gold-400 transition-colors duration-300 font-medium"
               >
                 DualTech Labs
               </a>
             </p>
           </div>
           <div className="mt-4 md:mt-0 space-x-4">
-            <Link href="/privacy-policy" className="hover:text-gold-500 transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-gold-500 transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-gold-500 transition-colors duration-300">Privacy Policy</Link>
+            <Link href="/terms-of-service" className="hover:text-gold-500 transition-colors duration-300">Terms of Service</Link>
           </div>
         </div>
       </div>

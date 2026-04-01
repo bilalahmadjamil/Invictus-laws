@@ -7,11 +7,12 @@ import { ArrowRight, PhoneCall } from "lucide-react";
 export default function CallToAction() {
   return (
     <section className="relative py-24 bg-maroon-900 overflow-hidden border-t-2 border-gold-500/30">
-      <div className="absolute inset-0 bg-maroon-950/20 mix-blend-overlay"></div>
+      {/* Simplified background - removed mix-blend-overlay for performance */}
+      <div className="absolute inset-0 bg-maroon-950/30"></div>
       
-      {/* Decorative patterns */}
-      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 rounded-full bg-maroon-800/40 blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-maroon-800/40 blur-3xl"></div>
+      {/* Simplified decorative patterns - removed blur */}
+      <div className="absolute top-0 right-0 -mr-20 -mt-20 w-60 h-60 rounded-full bg-maroon-800/10"></div>
+      <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-60 h-60 rounded-full bg-maroon-800/10"></div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <motion.div
@@ -29,11 +30,11 @@ export default function CallToAction() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-md text-white bg-maroon-950 hover:bg-maroon-800 transition-all duration-300 shadow-xl group">
+            <Link href="/contact" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border border-transparent text-base font-bold rounded-md text-white bg-maroon-950 hover:bg-maroon-800 transition-all duration-300 shadow-lg group">
               Get Started
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a href="tel:+923134891684" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-beige-100/30 text-base font-bold rounded-md text-white bg-transparent hover:bg-white/5 transition-all duration-300">
+            <a href="tel:+923134891684" className="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 border-2 border-beige-100/30 text-base font-bold rounded-md text-white bg-transparent hover:bg-white/10 transition-all duration-300">
               Call Lahore Office
             </a>
           </div>

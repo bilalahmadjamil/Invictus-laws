@@ -77,7 +77,7 @@ export default function TeamPreview() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-beige-50 rounded-2xl p-8 border border-beige-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="bg-beige-50 rounded-2xl p-8 border border-beige-100 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-20 h-20 shrink-0 rounded-full bg-maroon-950 flex items-center justify-center text-gold-500 font-serif text-2xl font-bold shadow-md overflow-hidden relative group-hover:ring-4 group-hover:ring-gold-500/20 transition-all duration-300">
@@ -87,7 +87,7 @@ export default function TeamPreview() {
                       alt={member.name} 
                       width={80}
                       height={80}
-                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       style={{ objectPosition: (member as any).objectPosition || "center" }}
                     />
                   ) : (

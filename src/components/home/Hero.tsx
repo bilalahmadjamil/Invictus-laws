@@ -1,23 +1,74 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 export default function Hero() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Optimized scroll handling for video
+  useEffect(() => {
+    let scrollTimeout: NodeJS.Timeout;
+    let isScrolling = false;
+    let ticking = false;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          if (!isScrolling && videoRef.current) {
+            videoRef.current.pause();
+            isScrolling = true;
+          }
+          
+          // Resume video after scroll ends
+          clearTimeout(scrollTimeout);
+          scrollTimeout = setTimeout(() => {
+            if (videoRef.current && isScrolling) {
+              videoRef.current.play().catch(() => {});
+              isScrolling = false;
+            }
+          }, 300);
+          
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    // Use passive listeners for better performance
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(scrollTimeout);
+    };
+  }, []);
+
   return (
     <section className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden bg-maroon-950 -mt-20">
-      {/* Background Video with overlay */}
+      {/* Optimized Background Video */}
       <video
+        ref={videoRef}
         autoPlay
         loop
         muted
         playsInline
         className="absolute inset-0 z-0 w-full h-full object-cover"
+        style={{ 
+          transform: 'translateZ(0)',
+          backfaceVisibility: 'hidden'
+        }}
+        preload="metadata"
+        disablePictureInPicture
+        disableRemotePlayback
       >
         <source src="https://cdn.pixabay.com/video/2026/03/04/338238_tiny.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 z-10 bg-maroon-950/80 backdrop-blur-[2px]" />
+      
+      {/* Simple overlay without backdrop-blur */}
+      <div className="absolute inset-0 z-10 bg-maroon-950/60" />
 
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0">
         <motion.div
