@@ -6,7 +6,7 @@ A premium, modern portfolio website for ICLC, a top-tier law firm specializing i
 The site is built for seamless deployment on **Vercel**. 
 
 ## 🛠 Tech Stack
-- **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
 - **Styling:** [Tailwind CSS 4](https://tailwindcss.com/)
 - **Animations:** [Framer Motion](https://www.framer.com/motion/)
 - **Icons:** [Lucide React](https://lucide.dev/)

@@ -64,7 +64,7 @@ export default function Hero() {
         disablePictureInPicture
         disableRemotePlayback
       >
-        <source src="https://cdn.pixabay.com/video/2026/03/04/338238_tiny.mp4" type="video/mp4" />
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
       </video>
       
       {/* Simple overlay without backdrop-blur */}
@@ -83,9 +83,9 @@ export default function Hero() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="flex items-center justify-center gap-3 mb-6"
           >
-            <div className="h-[1px] w-12 bg-gold-500"></div>
-            <span className="text-gold-500 font-medium tracking-widest text-sm uppercase">Your trusted legal partner, bridging borders for Pakistanis worldwide</span>
-            <div className="h-[1px] w-12 bg-gold-500"></div>
+            <div className="hidden sm:block h-[1px] w-8 sm:w-12 bg-gold-500 shrink-0"></div>
+            <span className="text-gold-500 font-medium tracking-wider sm:tracking-widest text-xs sm:text-sm uppercase text-center max-w-full">Your trusted legal partner, bridging borders for Pakistanis worldwide</span>
+            <div className="hidden sm:block h-[1px] w-8 sm:w-12 bg-gold-500 shrink-0"></div>
           </motion.div>
 
           <h1 className="text-3xl sm:text-5xl md:text-7xl font-serif font-bold text-white mb-6 leading-tight">

@@ -2,9 +2,9 @@
 
 import { motion } from "framer-motion";
 
-export default function WhatsAppButton() {
-  const phoneNumber = "923134891684";
-  const whatsappUrl = `https://wa.me/${phoneNumber}`;
+export default function WhatsAppButton({ phoneNumber = "923134891684" }: { phoneNumber?: string }) {
+  const cleanNumber = (phoneNumber || "923134891684").replace(/[^0-9]/g, "");
+  const whatsappUrl = `https://wa.me/${cleanNumber}`;
 
   return (
     <motion.a

@@ -1,12 +1,29 @@
 import { Metadata } from 'next';
 import SectionHeading from '@/components/ui/SectionHeading';
+import { client } from '@/sanity/lib/client';
+import { siteSettingsQuery } from '@/sanity/lib/queries';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | ICLC',
   description: 'The terms and conditions governing your use of the Invictus Corporate & Legal Consultants website and services.',
 };
 
-export default function TermsOfServicePage() {
+export const revalidate = 60;
+
+export default async function TermsOfServicePage() {
+  let settings: any = null;
+  try {
+    settings = await client.fetch(siteSettingsQuery);
+  } catch (err) {
+    console.warn('Failed to fetch settings in TermsOfServicePage', err);
+  }
+
+  const firmName = settings?.firmName || "Invictus Corporate & Legal Consultants";
+  const primaryOffice = settings?.offices?.[0];
+  const officeAddress = primaryOffice?.address || "Office No. 105, First Floor, Arif Building, Lahore";
+  const primaryPhone = settings?.consultationPhone || primaryOffice?.phones?.[0] || "+92 313 4891684";
+  const cleanPhone = primaryPhone.replace(/[^0-9+]/g, '');
+
   return (
     <div className="pt-20 pb-24 bg-beige-50 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-10">
@@ -41,10 +58,10 @@ export default function TermsOfServicePage() {
             <section>
               <h2 className="text-2xl font-serif font-bold text-maroon-950 mb-4">2. Nature of Services & No Attorney-Client Relationship</h2>
               <p>
-                The content available on this Website is provided for informational purposes only and does not constitute legal advice. Reading or interacting with Website content does not create an attorney-client relationship between you and Invictus.
+                The content available on this Website is provided for informational purposes only and does not constitute legal advice. Reading or interacting with Website content does not create an attorney-client relationship between you and {firmName}.
               </p>
               <div className="mt-4 p-6 bg-beige-50 border border-maroon-100 rounded-2xl italic text-sm">
-                A formal relationship is established only upon the execution of a formal Client Engagement Letter signed by an authorised representative of Invictus.
+                A formal relationship is established only upon the execution of a formal Client Engagement Letter signed by an authorised representative of {firmName}.
               </div>
             </section>
 
@@ -54,7 +71,7 @@ export default function TermsOfServicePage() {
               <ul className="list-disc pl-5 space-y-2">
                 <li>Unlawful use or transmission of malicious code</li>
                 <li>Systematic data extraction (scraping)</li>
-                <li>Impersonation of Invictus personnel</li>
+                <li>Impersonation of {firmName} personnel</li>
                 <li>Disrupting the functionality of the Website</li>
               </ul>
             </section>
@@ -62,14 +79,14 @@ export default function TermsOfServicePage() {
             <section>
               <h2 className="text-2xl font-serif font-bold text-maroon-950 mb-4">4. Intellectual Property</h2>
               <p>
-                All content on this Website is the exclusive intellectual property of Invictus Corporate & Legal Consultants and is protected under the Copyright Ordinance, 1962 (Pakistan) and international law.
+                All content on this Website is the exclusive intellectual property of {firmName} and is protected under the Copyright Ordinance, 1962 (Pakistan) and international law.
               </p>
             </section>
 
             <section>
               <h2 className="text-2xl font-serif font-bold text-maroon-950 mb-4">5. Limitation of Liability</h2>
               <p>
-                To the fullest extent permitted by Pakistani law, Invictus shall not be liable for any direct or indirect damages arising from your use of this Website or reliance on any information provided herein.
+                To the fullest extent permitted by Pakistani law, {firmName} shall not be liable for any direct or indirect damages arising from your use of this Website or reliance on any information provided herein.
               </p>
             </section>
 
@@ -82,9 +99,9 @@ export default function TermsOfServicePage() {
 
             <div className="bg-maroon-950 text-white p-8 rounded-3xl mt-12 border border-gold-500/20">
               <h4 className="text-gold-500 font-bold uppercase tracking-widest text-sm mb-4">General & Legal Inquiries</h4>
-              <p className="text-beige-50/80 mb-2">Invictus Corporate & Legal Consultants</p>
-              <p className="text-beige-50/80 mb-2">Office No. 105, First Floor, Arif Building, Lahore</p>
-              <p className="text-beige-50/80">Phone: <span className="text-gold-400">0313-4891684</span></p>
+              <p className="text-beige-50/80 mb-2">{firmName}</p>
+              <p className="text-beige-50/80 mb-2">{officeAddress}</p>
+              <p className="text-beige-50/80">Phone: <a href={`tel:${cleanPhone}`} className="text-gold-400 hover:underline">{primaryPhone}</a></p>
             </div>
           </div>
         </div>
