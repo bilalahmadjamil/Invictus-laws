@@ -11,8 +11,12 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://iclc.com.pk"),
   title: "Invictus Corporate & Legal Consultants | ICLC",
   description: "ICLC is a premier law firm offering comprehensive legal solutions for corporate entities, overseas Pakistanis, small businesses, and startups.",
+  alternates: {
+    canonical: "./",
+  },
   keywords: [
     "Law Firm Pakistan",
     "Corporate Lawyers Lahore",
@@ -31,11 +35,20 @@ export const metadata: Metadata = {
     siteName: "ICLC",
     locale: "en_PK",
     type: "website",
+    images: [
+      {
+        url: "/logo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Invictus Corporate & Legal Consultants (ICLC)"
+      }
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Invictus Corporate & Legal Consultants | ICLC",
     description: "Premier law firm in Pakistan providing corporate, civil, and criminal legal services.",
+    images: ["/logo.jpg"],
   },
   robots: {
     index: true,
