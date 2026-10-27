@@ -92,16 +92,29 @@ export default async function RootLayout({
         addressCountry: "PK"
       }));
 
+  const socialLinks = [
+    settings?.socialLinks?.linkedin,
+    settings?.socialLinks?.facebook,
+    settings?.socialLinks?.twitter,
+    settings?.socialLinks?.instagram,
+  ].filter(Boolean);
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "LegalService",
+    "@id": "https://iclc.com.pk/#organization",
     name: settings?.firmName || "Invictus Corporate & Legal Consultants (ICLC)",
+    alternateName: "ICLC",
     url: "https://iclc.com.pk",
+    logo: "https://iclc.com.pk/logo.jpg",
+    image: "https://iclc.com.pk/logo.jpg",
+    description: "Invictus Corporate & Legal Consultants (ICLC) is a premier legal advisory and corporate consultancy firm based in Pakistan.",
     telephone: settings?.consultationPhone || officeList[0]?.phones?.[0] || "+92 313 4891684",
     email: settings?.officialEmail || officeList[0]?.email || "contact@iclc.com.pk",
-    priceRange: "$$",
+    priceRange: "$",
     address: addressSchema,
-    openingHours: settings?.officeHours || "Mo-Sa 09:00-18:00"
+    openingHours: settings?.officeHours || "Mo-Sa 09:00-18:00",
+    ...(socialLinks.length > 0 ? { sameAs: socialLinks } : {}),
   };
 
   return (
